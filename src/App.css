@@ -1,0 +1,367 @@
+/* .wrapper {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+  display: block;
+  margin: 0 auto;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.sudoku-row {
+  display: contents;
+}
+
+.sudoku-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  height: 70vh;
+}
+
+.sudoku-board {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+  grid-gap: 0px;
+  margin: 20px auto;
+  width: 90%;
+  background-color: #fff;
+  max-height: 45%;
+  position: relative;
+}
+
+.sudoku-cell {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 20px;
+  border: 1px solid rgb(0, 0, 0);
+  background-color: #fff;
+  color: rgb(0, 0, 0);
+  box-sizing: border-box;
+}
+
+.sudoku-cell:nth-child(3) {
+  border-right: 3px solid #000;
+}
+
+.sudoku-cell:nth-child(6) {
+  border-right: 3px solid #000;
+}
+
+.row-2 .sudoku-cell{
+  border-bottom: 3px solid #000000;
+}
+
+.row-5 .sudoku-cell{
+  border-bottom: 3px solid #000;
+}
+
+.highlighted {
+  background-color: #6ad8ee;
+}
+
+.timer {
+  border: 1px solid black;
+  color: rgb(134, 19, 19);
+  font-weight: bold;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 6rem;
+  margin-right: 10px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.wrong {
+  background-color: #ff4d4d;
+  color: white;
+  border: 2px solid #d80000;
+} */
+
+body {
+  cursor: url("./assets/pencil.png"), auto;
+}
+
+.wrapper {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #fff;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+  display: block;
+  margin: 0 auto;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.sudoku-row {
+  display: contents;
+}
+
+.sudoku-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  height: 70vh;
+  cursor: url("./assets/pencil.png"), auto;
+}
+
+.sudoku-board {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+  grid-gap: 0px;
+  /* margin: 20px auto; */
+  width: 90%;
+  background-color: #fff;
+  max-height: 45%;
+  position: relative;
+}
+
+.sudoku-cell {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 20px;
+  border: 1px solid rgb(0, 0, 0);
+  background-color: #fff;
+  color: rgb(0, 0, 0);
+  box-sizing: border-box;
+  cursor: url("./assets/pencil.png") 16 16, auto;
+}
+
+.sudoku-cell:nth-child(3) {
+  border-right: 3px solid #000;
+}
+
+.sudoku-cell:nth-child(6) {
+  border-right: 3px solid #000;
+}
+
+.row-2 .sudoku-cell {
+  border-bottom: 3px solid #000000;
+}
+
+.row-5 .sudoku-cell {
+  border-bottom: 3px solid #000;
+}
+
+.highlighted {
+  background-color: #09bad9;
+}
+
+.timer {
+  width: 15%;
+  text-align: center;
+  border: 1px solid black;
+  color: rgb(134, 19, 19);
+  font-weight: bold;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 6rem;
+  margin-right: 10px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.wrong {
+  background-color: #ff4d4d;
+  color: white;
+  border: 2px solid #d80000;
+}
+
+.life {
+  color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.sudoku-cell.readonly {
+  background-color: #6e97ae;
+  color: #000;
+  font-weight: bold;
+  cursor: not-allowed;
+}
+
+.sudoku-cell.readonly:focus {
+  border: 2px solid #ccc;
+}
+
+.game-over {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: rgb(210, 25, 25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-over .restart-button {
+  background-color: #2688ce;  /* A different background color */
+  padding: 15px 30px;  /* Larger padding */
+  font-size: 1.5rem;  /* Bigger font size */
+  margin-top: 30px;  /* Adjust margin if needed */
+  border-radius: 8px;  /* Rounded corners */
+  cursor: pointer;
+}
+
+/* Hover effect for the Restart button */
+.game-over .restart-button:hover {
+  background-color: #02578f;  /* Darker shade on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .sudoku-board {
+    width: 95%; /* Increase width to fit the screen */
+    max-height: 60%;
+  }
+
+  .sudoku-cell {
+    width: 35px; /* Adjust cell size for smaller screens */
+    height: 35px;
+    font-size: 18px; /* Adjust font size */
+  }
+
+  .wrapper {
+    padding: 1rem; /* Add some padding to prevent content from touching edges */
+  }
+
+  button {
+    margin-top: 3rem; /* Adjust button position for smaller screens */
+  }
+
+  .timer {
+    font-size: 14px; /* Make the timer text smaller on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .sudoku-board {
+    width: 100%; /* Make the board take up full width on very small screens */
+    max-height: 70%;
+  }
+
+  .sudoku-cell {
+    width: 30px; /* Make cells even smaller on very small screens */
+    height: 30px;
+    font-size: 16px; /* Reduce font size further */
+  }
+
+  .timer {
+    font-size: 12px; /* Further adjust the timer text for very small screens */
+  }
+
+  button {
+    width: 100%; /* Make button full-width on mobile */
+    padding: 12px;
+  }
+}
